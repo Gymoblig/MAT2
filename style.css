@@ -125,6 +125,7 @@ body {
 .embedded-pdf {
     width: 80%;
     height: 80%;
+    border-radius:40px;
     border: none; /* Remove iframe border */
     background-color: white; /* Background color of iframe */
     z-index: 1001; /* Ensure it's on top of the overlay */
