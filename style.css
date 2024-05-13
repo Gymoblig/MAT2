@@ -84,3 +84,26 @@ body {
   a:hover {
     color:#b3b3b3;
   }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1000; /* Ensure it's on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*filter: blur(5px);*/
+}
+
+/* Style for the embedded PDF */
+.embedded-pdf {
+    width: 80%;
+    height: 80%;
+    border: none; /* Remove iframe border */
+    background-color: white; /* Background color of iframe */
+    z-index: 1001; /* Ensure it's on top of the overlay */
+}

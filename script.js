@@ -1,8 +1,25 @@
 function downloadPDF(filename) {
-    // Assuming the PDF files are in the same directory as the HTML file
-    const link = document.createElement('a');
-    link.href = filename;
-    link.download = filename.substr(filename.lastIndexOf('/') + 1);
-    link.click();
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    
+    // Create iframe
+    const iframe = document.createElement('iframe');
+    iframe.src = filename;
+    iframe.classList.add('embedded-pdf');
+
+    // Append iframe to overlay
+    overlay.appendChild(iframe);
+
+    // Append overlay to body
+    document.body.appendChild(overlay);
+
+    // Add event listener to close overlay when clicked outside the PDF
+    overlay.addEventListener('click', function(event) {
+        if (event.target === overlay) {
+            // Remove overlay and iframe
+            document.body.removeChild(overlay);
+        }
+    });  
   }
   
