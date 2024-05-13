@@ -85,6 +85,28 @@ body {
     color:#b3b3b3;
   }
 
+  .linky {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .linky a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px; /* Adjust margin as needed */
+  }
+  .linky a:hover {
+    color:#b3b3b3;
+  }
+  
+  .linky h2 {
+    color: white;
+    margin: 0 5px; /* Adjust margin as needed */
+    cursor: default;
+  }
+
+
   .overlay {
     position: fixed;
     top: 0;
